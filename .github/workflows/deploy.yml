@@ -19,19 +19,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Pages
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Prepare site
+      - name: Prepare website
         run: |
-          mkdir _site
+          mkdir -p _site
           cp -r frontend/* _site/
-          cp -r css _site/css
+          mkdir -p _site/css
+          cp css/style.css _site/css/style.css
 
-      - name: Upload artifact
+      - name: Upload website artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
