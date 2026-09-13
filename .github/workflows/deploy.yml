@@ -1,0 +1,66 @@
+name: Deploy static site to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare website
+        run: |
+          mkdir -p _site
+
+          # HTML files
+          cp -r frontend/* _site/
+
+          # CSS
+          mkdir -p _site/css
+          cp -r css/* _site/css/
+
+          # JavaScript
+          if [ -d "js" ]; then
+            cp -r js _site/js
+          fi
+
+          # Libraries
+          if [ -d "lib" ]; then
+            cp -r lib _site/lib
+          fi
+
+          # Images
+          if [ -d "images" ]; then
+            cp -r images _site/images
+          fi
+
+          # Other image folder used by the homepage
+          if [ -d "img" ]; then
+            cp -r img _site/img
+          fi
+
+      - name: Upload website artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
