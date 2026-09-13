@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Advocate Details - Legal Sphere</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="lib/bootstrap/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <!-- Libraries CSS -->
+  <link
+    href="lib/font-awesome/css/font-awesome.min.css"
+    rel="stylesheet">
+
+  <link
+    href="lib/animate/animate.min.css"
+    rel="stylesheet">
+
+  <link
+    href="lib/ionicons/css/ionicons.min.css"
+    rel="stylesheet">
+
+  <link
+    href="lib/owlcarousel/assets/owl.carousel.min.css"
+    rel="stylesheet">
+
+  <link
+    href="lib/lightbox/css/lightbox.min.css"
+    rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link
+    rel="stylesheet"
+    href="css/style.css">
+
+  <style>
+
+    /* =========================================================
+       PAGE
+    ========================================================= */
+
+    body {
+      font-family: "Open Sans", sans-serif;
+    }
+
+
+    /* =========================================================
+       MAIN CARD
+    ========================================================= */
+
+    .details-container {
+      max-width: 1050px;
+      margin: 120px auto 70px;
+      background: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+    }
+
+
+    /* =========================================================
+       TWO COLUMN LAYOUT
+    ========================================================= */
+
+    .provider-layout {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      min-height: 600px;
+    }
+
+
+    /* =========================================================
+       LEFT SIDE
+    ========================================================= */
+
+    .provider-left {
+      background: #e5f5f8;
+      padding: 45px 35px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+
+    /* =========================================================
+       IMAGE
+    ========================================================= */
+
+    .provider-image-container {
+      width: 240px;
+      height: 240px;
+      border-radius: 14px;
+      background: #ffffff;
+      border: 5px solid #ffffff;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      margin-bottom: 28px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    .profile-image {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      display: block;
+    }
+
+
+    /* =========================================================
+       INFORMATION BELOW IMAGE
+    ========================================================= */
+
+    .provider-contact-info {
+      width: 280px;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 30px;
+      font-weight: bold;
+    }
+
+
+    /* =========================================================
+       NAME
+    ========================================================= */
+
+    .provider-contact-info h2 {
+      margin: 0 0 18px 0;
+
+      font-family: "Montserrat", sans-serif;
+
+      font-size: 28px;
+      line-height: 1.2;
+
+      font-weight: 600;
+
+      color: #222222;
+
+      text-align: center;
+    }
+
+
+    /* =========================================================
+       PHONE / EMAIL / LOCATION
+    ========================================================= */
+
+    .left-detail {
+      display: grid;
+
+      grid-template-columns: 28px 1fr;
+
+      align-items: center;
+
+      width: 100%;
+
+      margin-bottom: 14px;
+
+      font-size: 16px;
+
+      line-height: 1.5;
+
+      color: #444444;
+    }
+
+
+    /* =========================================================
+       ICON
+    ========================================================= */
+
+    .left-detail i {
+      width: 28px;
+
+      margin: 0;
+
+      color: #98b7b6;
+
+      font-size: 18px;
+
+      text-align: left;
+    }
+
+
+    /* =========================================================
+       TEXT
+    ========================================================= */
+
+    .left-detail span,
+    .left-detail a {
+      color: #444444;
+
+      text-decoration: none;
+
+      word-break: break-word;
+    }
+
+
+    .left-detail a:hover {
+      color: #9eb7aa;
+    }
+
+
+    /* =========================================================
+       VIEW DOCUMENT BUTTON
+    ========================================================= */
+
+    .document-button {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      margin-top: 8px;
+
+      margin-left: 28px;
+
+      padding: 10px 18px;
+
+      background: #9dbbc6;
+
+      color: #000000 !important;
+
+      border-radius: 5px;
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      text-decoration: none !important;
+
+      transition: 0.3s;
+
+      white-space: nowrap;
+    }
+
+
+    .document-button i {
+      margin-right: 8px;
+
+      color: #ffffff;
+    }
+
+
+    .document-button:hover {
+      background: #9dbbc8;
+    }
+
+
+    /* =========================================================
+       RIGHT SIDE
+    ========================================================= */
+
+    .provider-right {
+      background: #ffffff;
+
+      padding: 45px 48px;
+
+      box-sizing: border-box;
+    }
+
+
+    /* =========================================================
+       RIGHT DETAILS
+    ========================================================= */
+
+    .provider-details {
+      width: 100%;
+    }
+
+
+    .detail-row {
+      display: grid;
+
+      grid-template-columns: 190px 35px 1fr;
+
+      align-items: start;
+
+      margin-bottom: 17px;
+
+      font-size: 16px;
+
+      line-height: 1.6;
+    }
+
+
+    .detail-label {
+      font-weight: 700;
+
+      color: #222222;
+    }
+
+
+    .detail-icon {
+      color: #000000;
+
+      font-size: 16px;
+
+      padding-top: 20px;
+
+      justify-content: center;
+
+      text-align: center;
+    }
+
+
+    .detail-value {
+      color: #666666;
+
+      word-break: break-word;
+    }
+
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about-row {
+      margin-bottom: 22px;
+    }
+
+
+    .about-row .detail-value {
+      line-height: 1.7;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .details-container {
+        margin: 100px 25px 50px;
+      }
+
+      .provider-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .provider-left {
+        padding: 40px 25px;
+      }
+
+      .provider-right {
+        padding: 35px 30px;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .details-container {
+        margin: 90px 15px 40px;
+
+        border-radius: 15px;
+      }
+
+      .provider-left {
+        padding: 30px 20px;
+      }
+
+      .provider-image-container {
+        width: 210px;
+        height: 210px;
+      }
+
+      .provider-contact-info {
+        width: 280px;
+      }
+
+      .provider-right {
+        padding: 30px 22px;
+      }
+
+      .detail-row {
+        grid-template-columns: 155px 30px 1fr;
+
+        font-size: 15px;
+      }
+
+    }
+
+
+    @media (max-width: 480px) {
+
+      .detail-row {
+        grid-template-columns: 1fr;
+
+        margin-bottom: 16px;
+      }
+
+      .detail-icon {
+        display: none;
+      }
+
+      .detail-label {
+        margin-bottom: 2px;
+      }
+
+      .provider-contact-info {
+        width: 100%;
+        max-width: 280px;
+      }
+
+      .document-button {
+        margin-left: 28px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================================================
+       HEADER
+  ========================================================== -->
+
+  <header id="header" style="height: 70px;">
+
+    <div class="container-fluid">
+
+      <div id="logo" class="pull-left">
+
+        <h1>
+
+          <a href="index.html" class="scrollto">
+
+            Legal Sphere
+
+          </a>
+
+        </h1>
+
+      </div>
+
+
+      <nav id="nav-menu-container">
+
+        <ul class="nav-menu">
+
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+
+          <li>
+            <a href="about.html">About Us</a>
+          </li>
+
+          <li>
+            <a href="lawsinindia.html">Laws in India</a>
+          </li>
+
+
+          <li class="menu-has-children">
+
+            <a href="services.html">Services</a>
+
+            <ul>
+
+              <li>
+                <a href="lawlist.html">Advocates</a>
+              </li>
+
+              <li>
+                <a href="notarylist.html">Notaries</a>
+              </li>
+
+              <li>
+                <a href="documentwriterlist.html">Document Writers</a>
+              </li>
+
+            </ul>
+
+          </li>
+
+
+          <li>
+
+            <a href="register.html">Register</a>
+
+          </li>
+
+
+        
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================================================
+       ADVOCATE DETAILS
+  ========================================================== -->
+
+  <div class="details-container">
+
+    <div class="provider-layout">
+
+
+      <!-- =====================================================
+           LEFT SIDE
+      ====================================================== -->
+
+      <div class="provider-left">
+
+
+        <div class="provider-image-container">
+
+          <img
+            id="lawyerImage"
+            src=""
+            alt="Advocate Profile"
+            class="profile-image">
+
+        </div>
+
+
+        <div class="provider-contact-info">
+
+
+          <!-- NAME -->
+
+          <h2 id="lawyerName">
+            Advocate
+          </h2>
+
+
+          <!-- CONTACT NUMBER -->
+
+          <div class="left-detail">
+
+            <i
+              class="fas fa-phone"
+              style="transform: scaleX(-1); padding: 10px;">
+            </i>
+
+            <a
+              id="lawyerPhoneLink"
+              href="#">
+
+              <span id="lawyerPhone"></span>
+
+            </a>
+
+          </div>
+
+
+          <!-- EMAIL -->
+
+          <div class="left-detail">
+
+            <i class="fas fa-envelope"></i>
+
+            <a
+              id="lawyerEmailLink"
+              href="#">
+
+              <span id="lawyerEmail"></span>
+
+            </a>
+
+          </div>
+
+
+          <!-- LOCATION -->
+
+          <div class="left-detail">
+
+            <i class="fas fa-map-marker-alt"></i>
+
+            <span id="lawyerAddress"></span>
+
+          </div>
+
+
+          <!-- VIEW DOCUMENT -->
+
+          <a
+            id="lawyerDocuments"
+            href="#"
+            target="_blank"
+            class="document-button">
+
+            View Document
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           RIGHT SIDE
+      ====================================================== -->
+
+      <div class="provider-right">
+
+        <div class="provider-details">
+
+
+          <!-- ABOUT -->
+
+          <div class="detail-row about-row">
+
+            <div class="detail-label">
+              About:
+            </div>
+
+            <div class="detail-icon"></div>
+
+            <div
+              class="detail-value"
+              id="lawyerAbout">
+            </div>
+
+          </div>
+
+
+          <!-- ENROLLMENT NUMBER -->
+
+          <div class="detail-row">
+
+            <div class="detail-label">
+              Enrollment Number:
+            </div>
+
+            <div class="detail-icon"></div>
+
+            <div
+              class="detail-value"
+              id="lawyerEnrollment">
+            </div>
+
+          </div>
+  <!-- FIELD OF EXPERTISE -->
+
+          <div class="detail-row">
+
+            <div class="detail-label">
+              Field of Expertise:
+            </div>
+
+            <div class="detail-icon"></div>
+
+            <div
+              class="detail-value"
+              id="lawyerExpertise">
+            </div>
+
+          </div>
+
+         
+
+
+          <!-- EXPERIENCE -->
+
+          <div class="detail-row">
+
+            <div class="detail-label">
+              Experience:
+            </div>
+
+            <div class="detail-icon"></div>
+
+            <div class="detail-value">
+
+              <span id="lawyerExperience"></span>
+
+              years
+
+            </div>
+
+          </div>
+
+
+        
+
+
+          <!-- COURTS -->
+
+          <div class="detail-row">
+
+            <div class="detail-label">
+              Courts:
+            </div>
+
+            <div class="detail-icon"></div>
+
+            <div
+              class="detail-value"
+              id="lawyerCourts">
+            </div>
+
+          </div>
+
+
+          <!-- LANGUAGES -->
+
+          <div class="detail-row">
+
+            <div class="detail-label">
+              Languages:
+            </div>
+
+            <div class="detail-icon"></div>
+
+            <div
+              class="detail-value"
+              id="lawyerLanguages">
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+<!--==========================
+    Footer
+  ============================-->
+<footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row justify-content-between">
+
+          <div class="col-lg-5 col-md-6 footer-info">
+            <h3>Legal Sphere</h3>
+            <p>Our legal experts are dedicated to protecting your rights and interests. Trust us to navigate the
+              complexities of the legal landscape for you.</p>
+          </div>
+          <div></div>
+          <div class="col-lg-5 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="ion-ios-arrow-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="about.html">About us</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="services.html">Services</a></li>
+              <!-- Updated links with IDs for JavaScript functionality -->
+              <li><i class="ion-ios-arrow-right"></i> <a href="#" id="termsBtn">Terms of service</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#" id="privacyBtn">Privacy policy</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div> 
+      <div class="copyright">
+        Legal Sphere &copy; 2026 . All Rights Reserved.
+      </div>    
+    </div>
+</footer><!-- #footer -->
+
+<!-- Modern Legal Pop-up Modal Structure -->
+<div id="legalModal" class="legal-modal">
+  <div class="legal-modal-content">
+    <span class="legal-close-btn">&times;</span>
+    <h3 id="modalTitle">Document Title</h3>
+    <div id="modalBody">
+      <!-- Dynamic legal text injections appear here -->
+    </div>
+  </div>
+</div>
+
+<!-- Embedded CSS Styles for the Modal -->
+<style>
+.legal-modal {
+  display: none; 
+  position: fixed; 
+  z-index: 99999; /* Higher than standard layouts to ensure overlap */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.6); 
+  backdrop-filter: blur(3px); /* Elegant blur background effect */
+}
+
+.legal-modal-content {
+  background-color: #ffffff;
+  margin: 12% auto; 
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%; 
+  max-width: 550px;
+  font-family: "Montserrat", sans-serif; /* Matches typical premium templates */
+  box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+  position: relative;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.legal-close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  line-height: 1;
+}
+
+.legal-close-btn:hover {
+  color: #000;
+}
+
+#modalTitle {
+  color: #333333;
+  font-weight: 700;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f4f4f4;
+  padding-bottom: 10px;
+}
+
+#modalBody p {
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 10px 0;
+}
+</style>
+
+<!-- Embedded JavaScript to Handle Modal Actions -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const modal = document.getElementById("legalModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalBody = document.getElementById("modalBody");
+  const closeBtn = document.querySelector(".legal-close-btn");
+
+  // Compact, professional texts optimized for legal service directories
+  const legalTexts = {
+    terms: `
+      <p>Welcome to LegalSphere. By accessing our directory, you agree to browse our listings solely for locating legitimate legal service providers filtered by specialization and city.</p>
+      <p>The information provided on LegalSphere does not constitute formal legal advice. Submitting information through our forms or contacting listed experts does not establish an attorney-client relationship.</p>
+    `,
+    privacy: `
+      <p>Your privacy is paramount at LegalSphere. We collect basic contact details and search criteria exclusively to route and pair you with relevant legal service providers in your requested city.</p>
+      <p>We do not lease, sell, or disclose your personal data to non-affiliated marketing entities. All database profiles use secured data schemas to ensure optimal platform integrity.</p>
+    `
+  };
+
+  // Open Terms
+  document.getElementById("termsBtn").addEventListener("click", function(e) {
+    e.preventDefault();
+    modalTitle.innerText = "Terms of Service";
+    modalBody.innerHTML = legalTexts.terms;
+    modal.style.display = "block";
+  });
+
+  // Open Privacy
+  document.getElementById("privacyBtn").addEventListener("click", function(e) {
+    e.preventDefault();
+    modalTitle.innerText = "Privacy Policy";
+    modalBody.innerHTML = legalTexts.privacy;
+    modal.style.display = "block";
+  });
+
+  // Close with X click
+  closeBtn.addEventListener("click", function() {
+    modal.style.display = "none";
+  });
+
+  // Close by clicking outside the modal box
+  window.addEventListener("click", function(e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+</script>
+
+
+
+  <!-- =========================================================
+       JAVASCRIPT LIBRARIES
+  ========================================================== -->
+
+  <script src="lib/jquery/jquery.min.js"></script>
+
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="lib/easing/easing.min.js"></script>
+
+  <script src="lib/superfish/hoverIntent.js"></script>
+
+  <script src="lib/superfish/superfish.min.js"></script>
+
+  <script src="lib/wow/wow.min.js"></script>
+
+  <script src="lib/waypoints/waypoints.min.js"></script>
+
+  <script src="lib/counterup/counterup.min.js"></script>
+
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+  <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+
+  <script src="js/main.js"></script>
+
+
+
+  <!-- =========================================================
+       ADVOCATE DETAILS JAVASCRIPT
+  ========================================================== -->
+
+  <script>
+
+    $(document).ready(function () {
+
+
+      /* GET LAWYER ID */
+
+      const urlParams =
+        new URLSearchParams(
+          window.location.search
+        );
+
+
+      const lawyerId =
+        urlParams.get("lawyerId");
+
+
+      if (!lawyerId) {
+
+        alert("Lawyer ID is missing.");
+
+        return;
+
+      }
+
+
+      /* GET LAWYER DETAILS */
+
+      $.ajax({
+
+        url:
+          "http://localhost:3000/get-lawyer?lawyerId="
+          +
+          encodeURIComponent(lawyerId),
+
+        type: "GET",
+
+
+        success: function (lawyer) {
+
+
+          if (!lawyer) {
+
+            alert("Lawyer not found.");
+
+            return;
+
+          }
+
+
+          /* NAME */
+
+          $("#lawyerName").text(
+            lawyer.name || ""
+          );
+
+
+          /* PHONE */
+
+          $("#lawyerPhone").text(
+            lawyer.phone || ""
+          );
+
+
+          if (lawyer.phone) {
+
+            $("#lawyerPhoneLink").attr(
+              "href",
+              "tel:" + lawyer.phone
+            );
+
+          }
+
+
+          /* EMAIL */
+
+          $("#lawyerEmail").text(
+            lawyer.email || ""
+          );
+
+
+          if (lawyer.email) {
+
+            $("#lawyerEmailLink").attr(
+              "href",
+              "mailto:" + lawyer.email
+            );
+
+          }
+
+
+          /* LOCATION */
+
+          $("#lawyerAddress").text(
+            lawyer.address || ""
+          );
+
+
+          $("#lawyerLocation").text(
+            lawyer.address || ""
+          );
+
+
+          /* ABOUT */
+
+          $("#lawyerAbout").text(
+            lawyer.about || ""
+          );
+
+
+          /* EXPERIENCE */
+
+          $("#lawyerExperience").text(
+            lawyer.experienceInYears || "0"
+          );
+
+
+          /* LANGUAGES */
+
+          $("#lawyerLanguages").text(
+            lawyer.languages || ""
+          );
+
+
+          /* FIELD OF EXPERTISE */
+
+          $("#lawyerExpertise").text(
+            lawyer.fieldOfExpertise || ""
+          );
+
+
+          /* ENROLLMENT */
+
+          $("#lawyerEnrollment").text(
+            lawyer.enrollment || ""
+          );
+
+
+          /* COURTS */
+
+          $("#lawyerCourts").text(
+            lawyer.courts || ""
+          );
+
+
+          /* IMAGE */
+
+          if (lawyer.image) {
+
+            $("#lawyerImage").attr(
+
+              "src",
+
+              "http://localhost:3000/"
+              +
+              encodeURIComponent(
+                lawyer.image
+              )
+
+            );
+
+          }
+
+
+          /* DOCUMENT */
+
+          if (lawyer.documents) {
+
+            $("#lawyerDocuments").attr(
+
+              "href",
+
+              "http://localhost:3000/"
+              +
+              encodeURIComponent(
+                lawyer.documents
+              )
+
+            );
+
+          }
+
+        },
+
+
+        error: function () {
+
+          alert(
+            "Unable to load lawyer details."
+          );
+
+        }
+
+      });
+
+    });
+
+  </script>
+
+
+</body>
+
+</html>

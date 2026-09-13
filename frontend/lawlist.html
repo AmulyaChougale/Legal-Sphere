@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Sphere</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    ::selection {
+      background: white;
+      color: black;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .containerr {
+      max-width: 1100px;
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      flex-wrap: wrap;
+      padding: 20px;
+      margin: 0 auto;
+    }
+
+    .containerr .box {
+      width: calc(33.33% - 25px);
+      height: 500px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 20px 30px;
+      border-radius: 10px;
+      border: 4px solid #18d26e;
+      margin-bottom: 20px;
+      margin-right: 25px;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+    } 
+
+    .box .quote i {
+      margin-top: 10px;
+      font-size: 45px;
+      color: #17c0eb;
+    }
+
+    .containerr .box .image {
+      margin: 10px 0;
+      height: 150px;
+      width: 150px;
+      background: white;
+      padding: 3px;
+      border-radius: 50%;
+      border: 2px ;
+    }
+
+    .box .image img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      object-fit: fil;
+      border: 2px solid black;
+    }
+/* 
+    .box p {
+      text-align: justify;
+      margin-top: 5px;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 9px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      line-clamp: 2;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    } */
+    .box p {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #666;
+  overflow: visible;
+}
+
+.box p i {
+  flex: 0 0 25px;
+  width: 25px;
+  margin-right: 8px;
+  margin-top: 2px;
+  text-align: center;
+  color: #666;
+}
+
+.box p span {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  word-break: break-word;
+}
+    .box .name_job {
+      margin: 10px 0 3px 0;
+      color: #8e44ad;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .rating i {
+      font-size: 18px;
+      color: #8e44ad;
+      margin-bottom: 5px;
+    }
+
+    .btns {
+      margin-top: auto;
+      margin-bottom: 5px;
+      width: 100%;
+    }
+
+    .btns button {
+      background: #8e44ad;
+      width: 100%;
+      padding: 9px 0px;
+      outline: none;
+      border: 2px solid #8e44ad;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 400;
+      color: #8e44ad;
+      transition: all 0.3s linear;
+    }
+
+    .btns button:first-child {
+      background: none;
+      margin-right: 5px;
+    }
+
+    .btns button:last-child {
+      color: #18d26e;
+      margin-left: 5px;
+    }
+
+    .btns button:first-child:hover {
+      background: #18d26e;
+      color: #fff;
+    }
+
+    .btns button:hover {
+      color: #18d26e;
+    }
+
+    #main-container {
+      width: 100%;
+      flex: 1 0 auto;
+    }
+
+    @media (max-width:1045px) {
+      .containerr .box {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width:710px) {
+      .containerr .box {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+
+    .containerr .box:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transform: scale(1.05);
+      border-color: #13a857;
+    }
+  </style>
+</head>
+
+<body>
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header" style="height: 70px;">
+    <div class="container-fluid">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#intro" class="scrollto">Legal Sphere </a></h1>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="lawsinindia.html">Laws in India</a></li>
+          <li class="menu-active menu-has-children"><a href="services.html">Services</a>
+            <ul>
+              <li><a href="lawlist.html">Advocates</a></li>
+                <li><a href="notarieslist.html">Notaries</a></li>
+              <li><a href="documentwriterlist.html">Document Writers</a></li>
+            </ul>
+          </li>
+          <li class=""><a href="service_registration.html">Register</a>
+      </li>      
+          
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <div id="main-container">
+    <section style="margin-top: 90px; text-align: center;">
+      <!-- sorting section goes here  -->
+      <div style="margin-top: 20px;">
+        <label for="filterLocation">Location:</label>
+        <select id="filterLocation">
+          <option value="All">All</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Bangalore">Bangalore</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Kolkata">Kolkata</option>
+          <option value="Jaipur">Jaipur</option>
+          <option value="Lucknow">Lucknow</option>
+          <option value="Ahmedabad">Ahmedabad</option>
+          <option value="Pune">Pune</option>
+          <option value="Surat">Surat</option>
+          <option value="Kanpur">Kanpur</option>
+          <option value="Nagpur">Nagpur</option>
+          <option value="Visakhapatnam">Visakhapatnam</option>
+          <option value="Indore">Indore</option>
+          <option value="Thane">Thane</option>
+          <option value="Bhopal">Bhopal</option>
+          <option value="Patna">Patna</option>
+          <option value="Vadodara">Vadodara</option>
+          <option value="Ghaziabad">Ghaziabad</option>
+          <option value="Ludhiana">Ludhiana</option>
+          <option value="Agra">Agra</option>
+          <option value="Nashik">Nashik</option>
+          <option value="Faridabad">Faridabad</option>
+          <option value="Meerut">Meerut</option>
+          <option value="Rajkot">Rajkot</option>
+          <option value="Varanasi">Varanasi</option>
+          <option value="Srinagar">Srinagar</option>
+          <option value="Aurangabad">Aurangabad</option>
+          <option value="Dhanbad">Dhanbad</option>
+          <option value="Amritsar">Amritsar</option>
+          <option value="Navi Mumbai">Navi Mumbai</option>
+          <option value="Allahabad">Allahabad</option>
+          <option value="Ranchi">Ranchi</option>
+          <option value="Howrah">Howrah</option>
+          <option value="Coimbatore">Coimbatore</option>
+          <option value="Jabalpur">Jabalpur</option>
+          <option value="Gwalior">Gwalior</option>
+          <option value="Vijayawada">Vijayawada</option>
+          <option value="Jodhpur">Jodhpur</option>
+          <option value="Madurai">Madurai</option>
+          <option value="Raipur">Raipur</option>
+          <option value="Kota">Kota</option>
+          <option value="Chandigarh">Chandigarh</option>
+          <option value="Guwahati">Guwahati</option>
+          <option value="Solapur">Solapur</option>
+          <option value="Hubli–Dharwad">Hubli–Dharwad</option>
+          <option value="Tiruchirappalli">Tiruchirappalli</option>
+          <option value="Bareilly">Bareilly</option>
+          <option value="Moradabad">Moradabad</option>
+          <option value="Mysore">Mysore</option>
+          <option value="Tiruppur">Tiruppur</option>
+          <option value="Gurgaon">Gurgaon</option>
+          <option value="Aligarh">Aligarh</option>
+          <option value="Jalandhar">Jalandhar</option>
+          <option value="Bhubaneswar">Bhubaneswar</option>
+          <option value="Salem">Salem</option>
+          <option value="Warangal">Warangal</option>
+          <option value="Guntur">Guntur</option>
+          <option value="Bhiwandi">Bhiwandi</option>
+          <option value="Saharanpur">Saharanpur</option>
+          <option value="Gorakhpur">Gorakhpur</option>
+          <option value="Bikaner">Bikaner</option>
+          <option value="Amravati">Amravati</option>
+          <option value="Noida">Noida</option>
+          <option value="Jamshedpur">Jamshedpur</option>
+          <option value="Bhilai">Bhilai</option>
+          <option value="Cuttack">Cuttack</option>
+          <option value="Firozabad">Firozabad</option>
+          <option value="Kochi">Kochi</option>
+          <option value="Nellore">Nellore</option>
+          <option value="Bhavnagar">Bhavnagar</option>
+          <option value="Dehradun">Dehradun</option>
+          <option value="Durgapur">Durgapur</option>
+          <option value="Asansol">Asansol</option>
+          <option value="Rourkela">Rourkela</option>
+          <option value="Nanded">Nanded</option>
+          <option value="Kolhapur">Kolhapur</option>
+          <option value="Ajmer">Ajmer</option>
+          <option value="Akola">Akola</option>
+          <option value="Gulbarga">Gulbarga</option>
+          <option value="Jamnagar">Jamnagar</option>
+          <option value="Ujjain">Ujjain</option>
+          <option value="Loni">Loni</option>
+          <option value="Siliguri">Siliguri</option>
+          <option value="Jhansi">Jhansi</option>
+          <option value="Ulhasnagar">Ulhasnagar</option>
+          <option value="Jammu">Jammu</option>
+          <option value="Sangli-Miraj & Kupwad">Sangli-Miraj & Kupwad</option>
+          <option value="Mangalore">Mangalore</option>
+          <option value="Erode">Erode</option>
+          <option value="Belgaum">Belgaum</option>
+          <option value="Kurnool">Kurnool</option>
+          <option value="Ambattur">Ambattur</option>
+          <option value="Rajahmundry">Rajahmundry</option>
+          <option value="Tirunelveli">Tirunelveli</option>
+          <option value="Malegaon">Malegaon</option>
+          <option value="Gaya">Gaya</option>
+          <option value="Jalgaon">Jalgaon</option>
+          <option value="Udaipur">Udaipur</option>
+          <option value="Maheshtala">Maheshtala</option>
+          <option value="Tirupati">Tirupati</option>
+          <option value="Davanagere">Davanagere</option>
+          <option value="Kozhikode">Kozhikode</option>
+          <option value="Akbarpur">Akbarpur</option>
+          <option value="Bokaro Steel City">Bokaro Steel City</option>
+          <option value="Bellary">Bellary</option>
+          <option value="Korba">Korba</option>
+          <option value="Bhilwara">Bhilwara</option>
+          <option value="Brahmapur">Brahmapur</option>
+          <option value="Muzaffarpur">Muzaffarpur</option>
+          <option value="Ahmednagar">Ahmednagar</option>
+        </select>
+
+        <label for="filterPracticeArea">Practice Area:</label>
+        <select id="filterPracticeArea">
+          <option value="All">All</option>
+          <option value="Anticipatory Bail">Anticipatory Bail</option>
+          <option value="Arbitration">Arbitration</option>
+          <option value="Armed Forces Tribunal">Armed Forces Tribunal</option>
+          <option value="Banking/Finance">Banking/Finance</option>
+          <option value="Bankruptcy/Insolvency">Bankruptcy/Insolvency</option>
+          <option value="Breach of Contract">Breach of Contract</option>
+          <option value="Cheque Bounce">Cheque Bounce</option>
+          <option value="Child Custody">Child Custody</option>
+          <option value="Civil">Civil</option>
+          <option value="Consumer Court">Consumer Court</option>
+          <option value="Corporate">Corporate</option>
+          <option value="Court Marriage">Court Marriage</option>
+          <option value="Criminal">Criminal</option>
+          <option value="Customs & Central Excise">Customs & Central Excise</option>
+        </select>
+
+        <label for="filterExperience">Experience:</label>
+        <select id="filterExperience">
+          <option value="All">All</option>
+          <option value="Above10">Above 10 years</option>
+          <option value="5to10">5-10 years</option>
+          <option value="2"> 2 years</option>
+        </select>
+      </div>
+      <div class="containerr" id="lawyerListContainer">
+
+      </div>
+    </section>
+  </div>
+
+<!--==========================
+    Footer
+  ============================-->
+<footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row justify-content-between">
+
+          <div class="col-lg-5 col-md-6 footer-info">
+            <h3>Legal Sphere</h3>
+            <p>Our legal experts are dedicated to protecting your rights and interests. Trust us to navigate the
+              complexities of the legal landscape for you.</p>
+          </div>
+          <div></div>
+          <div class="col-lg-5 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="ion-ios-arrow-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="about.html">About us</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="services.html">Services</a></li>
+              <!-- Updated links with IDs for JavaScript functionality -->
+              <li><i class="ion-ios-arrow-right"></i> <a href="#" id="termsBtn">Terms of service</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#" id="privacyBtn">Privacy policy</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div> 
+      <div class="copyright">
+        Legal Sphere &copy; 2026 . All Rights Reserved.
+      </div>    
+    </div>
+</footer><!-- #footer -->
+
+<!-- Modern Legal Pop-up Modal Structure -->
+<div id="legalModal" class="legal-modal">
+  <div class="legal-modal-content">
+    <span class="legal-close-btn">&times;</span>
+    <h3 id="modalTitle">Document Title</h3>
+    <div id="modalBody">
+      <!-- Dynamic legal text injections appear here -->
+    </div>
+  </div>
+</div>
+
+<!-- Embedded CSS Styles for the Modal -->
+<style>
+.legal-modal {
+  display: none; 
+  position: fixed; 
+  z-index: 99999; /* Higher than standard layouts to ensure overlap */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.6); 
+  backdrop-filter: blur(3px); /* Elegant blur background effect */
+}
+
+.legal-modal-content {
+  background-color: #ffffff;
+  margin: 12% auto; 
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%; 
+  max-width: 550px;
+  font-family: "Montserrat", sans-serif; /* Matches typical premium templates */
+  box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+  position: relative;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.legal-close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  line-height: 1;
+}
+
+.legal-close-btn:hover {
+  color: #000;
+}
+
+#modalTitle {
+  color: #333333;
+  font-weight: 700;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f4f4f4;
+  padding-bottom: 10px;
+}
+
+#modalBody p {
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 10px 0;
+}
+</style>
+
+<!-- Embedded JavaScript to Handle Modal Actions -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const modal = document.getElementById("legalModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalBody = document.getElementById("modalBody");
+  const closeBtn = document.querySelector(".legal-close-btn");
+
+  // Compact, professional texts optimized for legal service directories
+  const legalTexts = {
+    terms: `
+      <p>Welcome to LegalSphere. By accessing our directory, you agree to browse our listings solely for locating legitimate legal service providers filtered by specialization and city.</p>
+      <p>The information provided on LegalSphere does not constitute formal legal advice. Submitting information through our forms or contacting listed experts does not establish an attorney-client relationship.</p>
+    `,
+    privacy: `
+      <p>Your privacy is paramount at LegalSphere. We collect basic contact details and search criteria exclusively to route and pair you with relevant legal service providers in your requested city.</p>
+      <p>We do not lease, sell, or disclose your personal data to non-affiliated marketing entities. All database profiles use secured data schemas to ensure optimal platform integrity.</p>
+    `
+  };
+
+  // Open Terms
+  document.getElementById("termsBtn").addEventListener("click", function(e) {
+    e.preventDefault();
+    modalTitle.innerText = "Terms of Service";
+    modalBody.innerHTML = legalTexts.terms;
+    modal.style.display = "block";
+  });
+
+  // Open Privacy
+  document.getElementById("privacyBtn").addEventListener("click", function(e) {
+    e.preventDefault();
+    modalTitle.innerText = "Privacy Policy";
+    modalBody.innerHTML = legalTexts.privacy;
+    modal.style.display = "block";
+  });
+
+  // Close with X click
+  closeBtn.addEventListener("click", function() {
+    modal.style.display = "none";
+  });
+
+  // Close by clicking outside the modal box
+  window.addEventListener("click", function(e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+</script>
+
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      // Function to refresh and apply filtering
+      function refreshCards() {
+        let selectedLocation = $('#filterLocation').val();
+        let selectedPracticeArea = $('#filterPracticeArea').val();
+        let selectedExperience = $('#filterExperience').val();
+
+        $('.containerr .box').show();
+
+        if (selectedLocation !== 'All') {
+          $('.containerr .box').filter(function () {
+            return $(this).find('p:contains("Location")').text().indexOf(selectedLocation) === -1;
+          }).hide();
+        }
+
+        if (selectedPracticeArea !== 'All') {
+          $('.containerr .box').filter(function () {
+            return $(this).find('p:contains("Practice area")').text().indexOf(selectedPracticeArea) === -1;
+          }).hide();
+        }
+
+        if (selectedExperience !== 'All') {
+          $('.containerr .box').filter(function () {
+            let experienceText = $(this).find('p:contains("Experience")').text().split(':')[1].trim();
+            let experienceYears = parseInt(experienceText);
+
+            if (selectedExperience === 'Above10') {
+              return experienceYears <= 10;
+            } else if (selectedExperience === '5to10') {
+              return experienceYears < 5 || experienceYears > 10;
+            } else if (selectedExperience === '2') {
+              return experienceYears !== 2;
+            }
+          }).hide();
+        }
+      }
+
+      $('#filterLocation, #filterPracticeArea, #filterExperience').change(function () {
+        refreshCards();
+      });
+
+      let userInfo = JSON.parse(localStorage.getItem("user"));
+      if (userInfo) {
+        const loginInfo = $("#loginInfo");
+        const logoutInfo = $("#logoutInfo");
+        loginInfo.empty();
+        loginInfo.append(`<a href="">Hello ${userInfo.username}</a>`);
+        logoutInfo.append(`<a href="#" id="logoutButton">Logout</a>`);
+      }
+
+      $("#logoutInfo").click(function () {
+        localStorage.clear();
+        window.location.reload();
+      });
+
+      $.ajax({
+        url: "http://localhost:3000/get-lawyers",
+        type: "GET",
+        success: function (data) {
+          data.forEach(lawyer => {
+            const imagePath = "http://localhost:3000/uploads/" + encodeURIComponent(lawyer.image);
+                       const commentsContainer = $("#lawyerListContainer");
+            commentsContainer.append(`<div class="box">
+              <div class="image">
+                <img src="${imagePath}" alt="Profile Image">
+              </div>
+              <div class="name_job">${lawyer.name}</div>
+              <p><i class="fas fa-map-marker" aria-hidden="true"></i> Location: ${lawyer.address}</p>
+              <p><i class="fas fa-id-card" aria-hidden="true"></i> Enrollment No.: ${lawyer.enrollment}</p>
+              <p><i class="fas fa-briefcase" aria-hidden="true"></i> Experience: ${lawyer.experienceInYears} years</p>
+              <p><i class="fas fa-balance-scale" aria-hidden="true"></i> Practice area: ${lawyer.fieldOfExpertise}</p>
+              <div class="btns">
+                <a href="http://localhost:3000/lawyerDetails?lawyerId=${lawyer._id}"><button>Contact</button></a>
+              </div>
+            </div>`);
+          });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
