@@ -28,9 +28,33 @@ jobs:
       - name: Prepare website
         run: |
           mkdir -p _site
+
+          # HTML files
           cp -r frontend/* _site/
+
+          # CSS
           mkdir -p _site/css
-          cp css/style.css _site/css/style.css
+          cp -r css/* _site/css/
+
+          # JavaScript
+          if [ -d "js" ]; then
+            cp -r js _site/js
+          fi
+
+          # Libraries
+          if [ -d "lib" ]; then
+            cp -r lib _site/lib
+          fi
+
+          # Images
+          if [ -d "images" ]; then
+            cp -r images _site/images
+          fi
+
+          # Other image folder used by the homepage
+          if [ -d "img" ]; then
+            cp -r img _site/img
+          fi
 
       - name: Upload website artifact
         uses: actions/upload-pages-artifact@v3
